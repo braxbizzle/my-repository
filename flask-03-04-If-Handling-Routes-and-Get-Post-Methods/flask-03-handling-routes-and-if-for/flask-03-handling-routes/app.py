@@ -14,7 +14,7 @@ def home():
 
 
 # Create a function named about which returns a formatted string '<h1>This is my about page </h1>' 
-# and assign to the static route of ('about')
+# and assign to the static route of ('a bout')
 @app.route('/about')
 def about():
       return '<h1>This is my about page </h1>'
