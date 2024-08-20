@@ -23,21 +23,19 @@ Resources:
           FromPort: 80
           ToPort: 80
           CidrIp: 0.0.0.0/0
-  
-
-  rWebserver:
+ 
+  rWebServer:
     Type: AWS::EC2::Instance
     Properties:
+      Tags: 
+        - Key: Name
+          Value: brax-test-webserver
       ImageId: ami-066784287e358dad1
       InstanceType: t2.micro
       KeyName: ec2-ssh-key-braxton
       SecurityGroupIds: 
-        - !GetAtt rSecurityGroup.Id
-      SecurityGroups: 
-        - "String"
-      Tags: 
-        - Key: "String"
-          Value: "String" 
+        - !GetAtt rSecurityGroup.GroupId
       UserData: "String"
      
 # Outputs:
+
